@@ -1,0 +1,151 @@
+// Variables
+$neon: #2196f3;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  background: #000;
+}
+
+// Header
+.header {
+  .logo {
+    text-transform: uppercase;
+
+    span {
+      color: $neon;
+      letter-spacing: 3px;
+    }
+  }
+}
+
+// Header Content
+.header-content {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+
+  h1 {
+    font-size: 8rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding-bottom: 20px;
+    letter-spacing: 4px;
+  }
+
+  .intro {
+    font-size: 2.4rem;
+    letter-spacing: 4px;
+    padding-top: 5rem;
+
+    span {
+      color: $neon;
+    }
+  }
+
+  .get-started-btn {
+    cursor: pointer;
+    background: none;
+    border: 3px solid #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 13px 25px;
+    color: #fff;
+    &:hover {
+      background: $neon;
+      transition: 0.4s;
+    }
+  }
+}
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+
+    li {
+      padding: 20px;
+      &:hover {
+        cursor: pointer;
+        background: $neon;
+        transition: 0.4s;
+      }
+
+      a {
+        text-decoration: none;
+        color: #fff;
+        letter-spacing: 1.5px;
+      }
+    }
+  }
+}
+
+.logo {
+  position: fixed;
+  left: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+  margin: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.ring {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  height: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.ring img {
+  animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Responsiveness
+@media (max-width: 700px) {
+  .header-content {
+    left: 50%;
+
+    h1 {
+      font-size: 4.7rem;
+    }
+  }
+
+  .logo {
+    display: none;
+  }
+}

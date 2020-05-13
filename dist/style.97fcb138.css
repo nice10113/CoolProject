@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  background: #000;
+}
+
+.header .logo {
+  text-transform: uppercase;
+}
+.header .logo span {
+  color: #2196f3;
+  letter-spacing: 3px;
+}
+
+.header-content {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+}
+.header-content h1 {
+  font-size: 8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding-bottom: 20px;
+  letter-spacing: 4px;
+}
+.header-content .intro {
+  font-size: 2.4rem;
+  letter-spacing: 4px;
+  padding-top: 5rem;
+}
+.header-content .intro span {
+  color: #2196f3;
+}
+.header-content .get-started-btn {
+  cursor: pointer;
+  background: none;
+  border: 3px solid #fff;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 13px 25px;
+  color: #fff;
+}
+.header-content .get-started-btn:hover {
+  background: #2196f3;
+  transition: 0.4s;
+}
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+.navbar ul li {
+  padding: 20px;
+}
+.navbar ul li:hover {
+  cursor: pointer;
+  background: #2196f3;
+  transition: 0.4s;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+
+.logo {
+  position: fixed;
+  left: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+  margin: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.ring {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  height: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.ring img {
+  animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 700px) {
+  .header-content {
+    left: 50%;
+  }
+  .header-content h1 {
+    font-size: 4.7rem;
+  }
+
+  .logo {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=/style.97fcb138.css.map */
